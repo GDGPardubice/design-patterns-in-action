@@ -189,10 +189,116 @@
                 <h2>Singleton</h2>
             </section>
             <section>
-                <h2>Factory</h2>
+                <section>
+                    <h2>Factory</h2>
+                </section>
+                <section>
+                    <h2>Na co je návrhový vzor Factory? (Továrna)</h2>
+                    <img src="images/factory/Factory_fun.png">
+                </section>
+                <section>
+                    <h2>Typy factory:</h2>
+                    <ul>
+                        <li>Jednoduchá tovární metoda</li>
+                        <li>Tovární metoda</li>
+                        <li>Abstraktní továrna</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Jednoduchá tovární metoda - definice</h2>
+                    
+                        <blockquote cite="http://knihy.cpress.cz/navrhove-vzory.html">Definuje statickou metodu nahrazující konstruktor. Používá se vžude tam, kde potřebujeme získat odkaz
+                        na objekt, ale přímé použití konstruktoru není z nejrůznějších příčin optimálním řešením.</blockquote>
+                    <p class="fragment fade-in" style="font-size: 2.11em; color: red;">Cože?</p>
+                </section>
+                <section>
+                    <h2>Jednoduchá tovární metoda - příklady</h2>
+                    <ul>
+                        <li>Určitý počet instancí (Singletone),</li>
+                        <li>pokud konstruktor nepovoluje,</li>
+                        <li>více volnosti při vytváření objektů.</li>
+                        <li><a href="images/factory/grafy/Simple_Static Factory Method.html" target="_blank">Graf</a> &amp; ukázka kódu.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Jednoduchá tovární metoda - Shrnutí</h2>
+                    <ul>
+                        <li>Velice jednoduchý návrhový vzor.</li>
+                        <li>Dovoluje obejít některé nevýhody konstruktoru.</li>
+                        <li>Dovoluje získat větší kontrolu nad vytvářenými objekty.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Tovární metoda - definice</h2>
+                    <blockqoute cite="http://knihy.cpress.cz/navrhove-vzory.html">Definuje rozhraní s metodou pro získání objektu.
+Rozhodnutí o konkrétním typu objektu však nechává
+na svých potomcích, tj. na překrývajících verzích
+deklarované metody.</blockquote>
+                    <p class="fragment fade-in" style="font-size: 2.11em; color: red;">Cože?</p>
+                </section>
+                <section>
+                    <h2>Tovární metoda - příklady</h2>
+                    <ul>
+                        <li>Různé objekty, se kterými se pracuje stejně: iterátory, GUI&nbsp;prvky,</li>
+                        <li>umožňuje stejnou práci s rozdílnými objekty</li>
+                        <li>zlepšuje zapouzdření tříd.</li>
+                        <li><a href="images/factory/grafy/Abstract Factory Method.html" target="_blank">Graf</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Implementace Tovární metody</h2>
+                </section>
+                <section>
+                    <h2>Na zapamatování:</h2>
+                    <p>Tovární metodu využijeme, pokud:
+                    <ul>
+                        <li>potřebujeme lépe řídit vytváření objektů, než dovoluje konstruktor.</li>
+                        <li>chceme pracovat stejně s rozdílnými objekty v programu.</li>
+                        <li>chceme odstínit klienty od vytváření objektů třídy.</li>
+                    </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Pokročilé: Abstraktní továrna</h2>
+                </section>
+                <section>
+                    <h2>Abstraktní továrna - definice</h2>
+                    <blockquote cite="http://knihy.cpress.cz/navrhove-vzory.html">Definuje rozhraní pro tvorbu celé rodiny
+souvisejících nebo závislých objektů
+a tím odděluje klienta od vlastního procesu
+vytváření objektů.</blockquote>
+                    <h2 class="fragment fade-in" style="color: red;">Cože?</h2>
+                </section>
+                <section>
+                    <h2>Abstraktní továrna - příklady</h2>
+                    <ul>
+                        <li>CAD programy - bokorys, půdorys, nárys (Maya)</li>
+                        <li>Look &amp; Feel u GUI (speciálně Java)</li>
+                        <li><a href="http://php/design-patterns-in-action/session-1/presentation/images/factory/grafy/Abstract%20Factory.html" target="_blank">Look &amp; Feel 1</a>
+                            &amp;
+                            <a href="http://php/design-patterns-in-action/session-1/presentation/images/factory/grafy/Abstract%20Factory-concrete%20example-graphics%20system.html" target="_blank">Look &amp; Feel 2</a></l>
+                    <ul>
+                </section>
             </section>
             <section>
                 <h2>Builder</h2>
+            </section>
+            <section>
+                <section>
+                    <h2>Tričko?</h2>
+                    <h2 class="fragment fade-in" style="color: red;">Za úkol!</h2>
+                </section>
+                <section>
+                    <h2>Zadání</h2>
+                    <p>
+                        Naprogramujte minimálně 2 jednoduché kolekce a ke každé kolekci implementujte minimálně 2 iterátory pro procházení dané kolekce za použití návrhového vzoru Factory method.
+                    </p>
+                    <p style="color: red;">
+                        Autor nejrychleji odevzdané práce a autor nejlepší implementace budou odměněni.
+                    </p>
+                    <h3>Odevzdání: info@gdgpardubice.cz
+                    </h3>
+                </section>
             </section>
         </div>
     </div>
