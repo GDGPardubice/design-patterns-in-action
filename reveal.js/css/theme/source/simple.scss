@@ -3,31 +3,36 @@
  * to the default theme. The accent color is darkblue.
  * 
  * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
- * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se; so is the theme - beige.css - that this is based off of.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 
 
 // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import "../template/../template/mixins";
+@import "../template/../template/settings";
 // ---------------------------------------------
 
 
 
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$mainFont: 'Lato', Times, 'Times New Roman', serif;
 $mainColor: #000;
-$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
-$headingColor: #383D3D;
+$headingFont: 'News Cycle', Impact, sans-serif;
+$headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
-$backgroundColor: #F0F1EB;
-$linkColor: #51483D;
+$backgroundColor: #fff;
+$linkColor: #00008B;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: #26351C;
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import "../template/../template/theme";
 // ---------------------------------------------

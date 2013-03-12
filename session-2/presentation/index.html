@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Design Patterns in action</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Jiří Pénzeš, Jan Voráček, Vojtěch Biberle">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <script>document.write('<link rel="stylesheet" href="../../reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');</script>
+    <!--[if lt IE 9]>
+    <script src="../../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+            </section>
+            <section>
+                <section>
+                    <h2>design patterns in action</h2>
+                </section>
+                <section>
+                    <img src="../../session-1/presentation/images/gdg_pardubice_logo.png" style="border: none;">
+                </section>
+                <section>
+                    <h2>www.gdgpardubice.cz</h2>
+                </section>
+            </section>
+            <section>
+                <h2>2# DPA</h2>
+                <div>
+                    <p>Dekorátor</p>
+                    <p>Fasáda</p>
+                    <p>?</p>
+                </div>
+            </section>
+            <section>
+                <section>
+                    TODO: obrázek dekorátor
+                </section>
+               <section>
+                     <h2>Dekorátor</h2>
+                     <p>
+                    Přidává další přídavnou fukncionalitu k objektu tak, že jej "zabalí" do jiného objektu,
+                         který má na starosti pouze přidanou funkcionalitu, a zbytek požadavků deleguje na
+                         "zabalený" objekt. Tím umožňuje přidávat funkčnost dynamicky a zavádí flexibilní
+                         alternativu k dědění.
+                     </p>
+               </section>
+               <section>
+                    <h2>Co to je?</h2>
+               </section>
+                <section>
+                    <h2>Kde se používá?</h2>
+                    <p class="fragment fade-in">GUI - např. styly okna</p>
+                    <p class="fragment fade-in">Čtení dat - potřebujeme načítat speciality</p>
+                    <p class="fragment fade-in">Výroba objektů - přidáváme novou funcionalitu</p>
+                    <p class="fragment fade-in">Web šablony - přidání druhu pohledu</p>
+               </section>
+               <section>
+                    <h2>Návrh</h2>
+               </section>   
+               <section>
+                    <h2>Požadavky</h2>
+                     <p class="fragment fade-in">Máme třídu ...</p>
+                     <hr class="fragment fade-in">
+                     <p class="fragment fade-in">Chceme dynamicky přidávat vlastnosti.</p>
+                     <p class="fragment fade-in">Zároveň chceme vlastnosti odebírat.</p>
+                     <p class="fragment fade-in">Potřebujeme ovlivnit určité chování.</p>
+                     <p class="fragment fade-in">Nechceme moc dědičnosti.</p>
+                </section>
+               <section>
+                    <h2>UML</h2>
+                    TODO: uml diagram dekorátor
+                </section>
+                <section>
+                    <h2>Jdeme kódit!</h2>
+                </section>
+                <section>
+                    <h2>Shrnutí</h2>
+                    <p class="fragment fade-in">Umožňuje snížit rostoucí počet tříd</p>
+                    <p class="fragment fade-in">Každá nová funkčnost je implementována jako "ozdobení"</p>
+                    <p class="fragment fade-in">Základní třídy i dekorátory mají společné rodiče</p>
+                    <p class="fragment fade-in">Chování dekorátoru NEOVLIVŇUJEME předáním parametru. Raději uděláme nový dekorátor</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    TODO: obrázek fasáda
+                </section>
+                <section>
+                    <h2>Fasáda</h2>
+                    <p>
+                        Fasádu použijeme tehdy, když nějaký systém začne být pro své uživatele příliš složitý vzhledem k oblasti úloh.
+                        Fasáda umožňuje nahraditnsadu rozhraní jednotlivých subsystémů společným jednotným rozhraním zastupujícím celý systém.
+                        Definuje tedy jedno rouhraní vyšší úrovně, které usnadní využívání subsystémů. Cílem je zjednodušit rozhraní celého systému
+                        a snížit počet tříd, které se sebou navzájem musí komunikovat.
+                    </p>
+                </section>
+                <section>
+                    <h2>Na co je?</h2>
+                </section>
+                <section>
+                    <h2>Kde se používá:</h2>
+                    <p class="fragment fade-in">Grafické knihovny (2D i 3D)</p>
+                    <p class="fragment fade-in">Systémová volání (čtení a zápis do souborů)</p>
+                    <p class="fragment fade-in">Práce se vzdálenými systémy</p>
+                </section>
+                <section>
+                    <h2>Návrh</h2>
+                </section>
+                <section>
+                    <h2>Požadavky</h2>
+                    <p class="fragment fade-in">NOTES: Fasádu většinou vytváří autor složitého systému</p>
+                    <hr class="fragment fade-in">
+                    <p class="fragment fade-in">Jsme autorem složitého systému</p>
+                    <p class="fragment fade-in">Chceme zabalit použití knihovny v projektu</p>
+                    <p class="fragment fade-in">Chceme snížit vazby na externí knihovny <small>(možnost použít i jiné návrhové vzory)</small></p>
+                </section>
+                <section>
+                    <h2>UML</h2>
+                    TODO: uml diagram fasáda
+                </section>
+                <section>
+                    <h2>Jdeme kódit!</h2>
+                </section>
+                <section>
+                    <h2>Shrnutí</h2>
+                    <p class="fragment fade-in">Cílem je znednodušit rozhraní k systému</p>
+                    <p class="fragment fade-in">Může snížit vazby mezi třídami (externími knihovnami)</p>
+                    <p class="fragment fade-in">Má cenu, jen pokud je jednodušší, než nastudování zaobaleného systému</p>
+                    <p class="fragment fade-in">Většinou implementována jako jedna třída</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Tričko?</h2>
+                    <h2 class="fragment fade-in" style="color: red;">Za úkol!</h2>
+                </section>
+                <section>
+                    <h2>Zadání</h2>
+                    <p>
+                        TODO: doplnit!
+                    </p>
+                    <p style="color: red;">
+                        Autor nejrychleji odevzdané práce a autor nejlepší implementace budou odměněni.
+                    </p>
+                    <h3>Odevzdání: info@gdgpardubice.cz
+                    </h3>
+                </section>
+            </section>
+            <section>
+                <h2>Feedback</h2>
+                    <p>Prosím vyplňte krátký feedback:<br />
+                        <a href="http://gdgpardubice.cz/go/dpa2" target="_blank">gdgpardubice.cz/go/dpa2</a>
+                    </p>
+                </section>
+        </div>
+    </div>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.min.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            theme: Reveal.getQueryHash().theme || 'serif', // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+                // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+		</script>
+</body>
+</html>

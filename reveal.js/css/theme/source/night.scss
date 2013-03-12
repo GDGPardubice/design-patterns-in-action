@@ -6,8 +6,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import "../template/../template/mixins";
+@import "../template/../template/settings";
 // ---------------------------------------------
 
 
@@ -31,5 +31,5 @@ $mainFontSize: 30px;
 
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import "../template/../template/theme";
 // ---------------------------------------------

@@ -6,8 +6,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import "../template/../template/mixins";
+@import "../template/../template/settings";
 // ---------------------------------------------
 
 
@@ -37,5 +37,5 @@ $selectionBackgroundColor: #134674;
 
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import "../template/../template/theme";
 // ---------------------------------------------
