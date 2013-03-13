@@ -16,6 +16,11 @@
     <!--[if lt IE 9]>
     <script src="../../reveal.js/lib/js/html5shiv.js"></script>
     <![endif]-->
+    <style type="text/css">
+        .reveal section img {
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <div class="reveal">
@@ -27,23 +32,28 @@
                     <h2>design patterns in action</h2>
                 </section>
                 <section>
-                    <img src="../../session-1/presentation/images/gdg_pardubice_logo.png" style="border: none;">
-                </section>
-                <section>
+                    <img src="../../gdg-pardubice-logo-big.png" style="border: none;">
                     <h2>www.gdgpardubice.cz</h2>
                 </section>
             </section>
             <section>
+                <h2>Úkol - výherce</h2>
+                <h1 class="fragment" style="color: red;">Radek Baxa</h1>
+            </section>
+            <!--<section>
                 <h2>2# DPA</h2>
                 <div>
                     <p>Dekorátor</p>
                     <p>Fasáda</p>
                     <p>?</p>
                 </div>
-            </section>
+            </section>-->
             <section>
                 <section>
-                    TODO: obrázek dekorátor
+                    <img src="images/decorator1.jpg" />
+                </section>
+                <section>
+                    <img src="images/decorator2.jpg" />
                 </section>
                <section>
                      <h2>Dekorátor</h2>
@@ -58,6 +68,14 @@
                     <h2>Co to je?</h2>
                </section>
                 <section>
+                    <h2>UML</h2>
+                    <img src="images/decorator-diagram2.gif" />
+                </section>
+                <section>
+                    <pre><code class="java">Component component = new ConcreteComponent();
+Component decoratedComponent = new ConcreteDecoratorA(component);</code></pre>
+                </section>
+                <section>
                     <h2>Kde se používá?</h2>
                     <p class="fragment fade-in">GUI - např. styly okna</p>
                     <p class="fragment fade-in">Čtení dat - potřebujeme načítat speciality</p>
@@ -65,20 +83,19 @@
                     <p class="fragment fade-in">Web šablony - přidání druhu pohledu</p>
                </section>
                <section>
-                    <h2>Návrh</h2>
-               </section>   
-               <section>
                     <h2>Požadavky</h2>
-                     <p class="fragment fade-in">Máme třídu ...</p>
+                     <p class="fragment fade-in">Máme skupinu tříd ...</p>
                      <hr class="fragment fade-in">
                      <p class="fragment fade-in">Chceme dynamicky přidávat vlastnosti.</p>
                      <p class="fragment fade-in">Zároveň chceme vlastnosti odebírat.</p>
                      <p class="fragment fade-in">Potřebujeme ovlivnit určité chování.</p>
                      <p class="fragment fade-in">Nechceme moc dědičnosti.</p>
                 </section>
-               <section>
-                    <h2>UML</h2>
-                    TODO: uml diagram dekorátor
+                <section>
+                    <img src="images/decorator-diagram3-java.jpg" />
+                </section>
+                <section>
+                    <img src="images/decorator-diagram5-girls.png" />
                 </section>
                 <section>
                     <h2>Jdeme kódit!</h2>
@@ -93,7 +110,10 @@
             </section>
             <section>
                 <section>
-                    TODO: obrázek fasáda
+                    <img src="images/facade2.jpg" />
+                </section>
+                <section>
+                    <img src="images/facade1.jpg" />
                 </section>
                 <section>
                     <h2>Fasáda</h2>
@@ -108,13 +128,14 @@
                     <h2>Na co je?</h2>
                 </section>
                 <section>
+                    <h2>UML</h2>
+                    <img src="images/facade-diagram1.gif" />
+                </section>
+                <section>
                     <h2>Kde se používá:</h2>
                     <p class="fragment fade-in">Grafické knihovny (2D i 3D)</p>
                     <p class="fragment fade-in">Systémová volání (čtení a zápis do souborů)</p>
                     <p class="fragment fade-in">Práce se vzdálenými systémy</p>
-                </section>
-                <section>
-                    <h2>Návrh</h2>
                 </section>
                 <section>
                     <h2>Požadavky</h2>
@@ -125,8 +146,7 @@
                     <p class="fragment fade-in">Chceme snížit vazby na externí knihovny <small>(možnost použít i jiné návrhové vzory)</small></p>
                 </section>
                 <section>
-                    <h2>UML</h2>
-                    TODO: uml diagram fasáda
+                    <img src="images/facade-diagram3.jpg" />
                 </section>
                 <section>
                     <h2>Jdeme kódit!</h2>
@@ -146,14 +166,18 @@
                 </section>
                 <section>
                     <h2>Zadání</h2>
-                    <p>
+                    <p class="fragment">
+                        <strong>#1:</strong>
                         TODO: doplnit!
                     </p>
-                    <p style="color: red;">
-                        Autor nejrychleji odevzdané práce a autor nejlepší implementace budou odměněni.
+                    <p class="fragment">
+                        <strong>#2:</strong>
                     </p>
-                    <h3>Odevzdání: info@gdgpardubice.cz
-                    </h3>
+                    <p class="fragment" style="color: red;">
+                        Autor nejrychleji odevzdané práce a autor nejlepší implementace bude odměněn.
+                    <h3>Odevzdání: info@gdgpardubice.cz</h3>
+                    </p>
+
                 </section>
             </section>
             <section>
