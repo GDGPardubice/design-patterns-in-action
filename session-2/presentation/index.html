@@ -50,18 +50,15 @@
             </section>-->
             <section>
                 <section>
-                    <img src="images/decorator1.jpg" />
-                </section>
-                <section>
-                    <img src="images/decorator2.jpg" />
+                    <img src="images/decorator.jpg">
                 </section>
                <section>
                      <h2>Dekorátor</h2>
                      <p>
-                    Přidává další přídavnou fukncionalitu k objektu tak, že jej "zabalí" do jiného objektu,
-                         který má na starosti pouze přidanou funkcionalitu, a zbytek požadavků deleguje na
-                         "zabalený" objekt. Tím umožňuje přidávat funkčnost dynamicky a zavádí flexibilní
-                         alternativu k dědění.
+                        Přidává další přídavnou funkcionalitu k objektu tak, že jej &bdquo;zabalí&ldquo; do jiného objektu,
+                        který má na starosti pouze přidanou funkcionalitu, a zbytek požadavků deleguje na
+                        &bdquo;zabalený&ldquo; objekt. Tím umožňuje přidávat funkčnost dynamicky a zavádí flexibilní
+                        alternativu k dědění.
                      </p>
                </section>
                <section>
@@ -69,7 +66,7 @@
                </section>
                 <section>
                     <h2>UML</h2>
-                    <img src="images/decorator-diagram2.gif" />
+                    <img src="images/decorator-uml.png">
                 </section>
                 <section>
                     <pre><code class="java">Component component = new ConcreteComponent();
@@ -77,49 +74,46 @@ Component decoratedComponent = new ConcreteDecoratorA(component);</code></pre>
                 </section>
                 <section>
                     <h2>Kde se používá?</h2>
-                    <p class="fragment fade-in">GUI - např. styly okna</p>
-                    <p class="fragment fade-in">Čtení dat - potřebujeme načítat speciality</p>
-                    <p class="fragment fade-in">Výroba objektů - přidáváme novou funcionalitu</p>
-                    <p class="fragment fade-in">Web šablony - přidání druhu pohledu</p>
+                    <p class="fragment fade-in">GUI &ndash; např. styly okna</p>
+                    <p class="fragment fade-in">Čtení dat &ndash; potřebujeme načítat speciality</p>
+                    <p class="fragment fade-in">Výroba objektů &ndash; přidáváme novou funcionalitu</p>
+                    <p class="fragment fade-in">Web šablony &ndash; přidání druhu pohledu</p>
                </section>
                <section>
                     <h2>Požadavky</h2>
-                     <p class="fragment fade-in">Máme skupinu tříd ...</p>
+                     <p class="fragment fade-in">Máme skupinu tříd &hellip;</p>
                      <hr class="fragment fade-in">
                      <p class="fragment fade-in">Chceme dynamicky přidávat vlastnosti.</p>
                      <p class="fragment fade-in">Zároveň chceme vlastnosti odebírat.</p>
                      <p class="fragment fade-in">Potřebujeme ovlivnit určité chování.</p>
                      <p class="fragment fade-in">Nechceme moc dědičnosti.</p>
-                </section>
-                <section>
+               </section>
+               <section>
                     <img src="images/decorator-diagram3-java.jpg" />
-                </section>
-                <section>
+               </section>
+               <section>
                     <img src="images/decorator-diagram5-girls.png" />
-                </section>
+               </section>
                 <section>
                     <h2>Jdeme kódit!</h2>
                 </section>
                 <section>
                     <h2>Shrnutí</h2>
-                    <p class="fragment fade-in">Umožňuje snížit rostoucí počet tříd</p>
-                    <p class="fragment fade-in">Každá nová funkčnost je implementována jako "ozdobení"</p>
-                    <p class="fragment fade-in">Základní třídy i dekorátory mají společné rodiče</p>
-                    <p class="fragment fade-in">Chování dekorátoru NEOVLIVŇUJEME předáním parametru. Raději uděláme nový dekorátor</p>
+                    <p class="fragment fade-in">Umožňuje snížit rostoucí počet tříd.</p>
+                    <p class="fragment fade-in">Každá nová funkčnost je implementována jako &bdquo;ozdobení&ldquo;.</p>
+                    <p class="fragment fade-in">Základní třídy i dekorátory implementují stejné rozhraní.</p>
+                    <p class="fragment fade-in">Chování dekorátoru NEOVLIVŇUJEME předáním parametru. Raději uděláme nový dekorátor.</p>
                 </section>
             </section>
             <section>
                 <section>
-                    <img src="images/facade2.jpg" />
-                </section>
-                <section>
-                    <img src="images/facade1.jpg" />
+                    <img src="images/facade.png">
                 </section>
                 <section>
                     <h2>Fasáda</h2>
                     <p>
                         Fasádu použijeme tehdy, když nějaký systém začne být pro své uživatele příliš složitý vzhledem k oblasti úloh.
-                        Fasáda umožňuje nahraditnsadu rozhraní jednotlivých subsystémů společným jednotným rozhraním zastupujícím celý systém.
+                        Fasáda umožňuje nahradit sadu rozhraní jednotlivých subsystémů společným jednotným rozhraním zastupujícím celý systém.
                         Definuje tedy jedno rouhraní vyšší úrovně, které usnadní využívání subsystémů. Cílem je zjednodušit rozhraní celého systému
                         a snížit počet tříd, které se sebou navzájem musí komunikovat.
                     </p>
@@ -129,7 +123,7 @@ Component decoratedComponent = new ConcreteDecoratorA(component);</code></pre>
                 </section>
                 <section>
                     <h2>UML</h2>
-                    <img src="images/facade-diagram1.gif" />
+                    <img src="images/facade-uml.png">
                 </section>
                 <section>
                     <h2>Kde se používá:</h2>
@@ -139,11 +133,11 @@ Component decoratedComponent = new ConcreteDecoratorA(component);</code></pre>
                 </section>
                 <section>
                     <h2>Požadavky</h2>
-                    <p class="fragment fade-in">NOTES: Fasádu většinou vytváří autor složitého systému</p>
+                    <p class="fragment fade-in">NOTES: Fasádu většinou vytváří autor složitého systému.</p>
                     <hr class="fragment fade-in">
-                    <p class="fragment fade-in">Jsme autorem složitého systému</p>
-                    <p class="fragment fade-in">Chceme zabalit použití knihovny v projektu</p>
-                    <p class="fragment fade-in">Chceme snížit vazby na externí knihovny <small>(možnost použít i jiné návrhové vzory)</small></p>
+                    <p class="fragment fade-in">Jsme autorem složitého systému.</p>
+                    <p class="fragment fade-in">Chceme zabalit použití knihovny v projektu.</p>
+                    <p class="fragment fade-in">Chceme snížit vazby na externí knihovny. <small>(možnost použít i jiné návrhové vzory)</small></p>
                 </section>
                 <section>
                     <img src="images/facade-diagram3.jpg" />
@@ -153,10 +147,10 @@ Component decoratedComponent = new ConcreteDecoratorA(component);</code></pre>
                 </section>
                 <section>
                     <h2>Shrnutí</h2>
-                    <p class="fragment fade-in">Cílem je znednodušit rozhraní k systému</p>
-                    <p class="fragment fade-in">Může snížit vazby mezi třídami (externími knihovnami)</p>
-                    <p class="fragment fade-in">Má cenu, jen pokud je jednodušší, než nastudování zaobaleného systému</p>
-                    <p class="fragment fade-in">Většinou implementována jako jedna třída</p>
+                    <p class="fragment fade-in">Cílem je znednodušit rozhraní k systému.</p>
+                    <p class="fragment fade-in">Může snížit vazby mezi třídami (externími knihovnami).</p>
+                    <p class="fragment fade-in">Má cenu, jen pokud je jednodušší, než nastudování zaobaleného systému.</p>
+                    <p class="fragment fade-in">Většinou implementována jako jedna třída.</p>
                 </section>
             </section>
             <section>
