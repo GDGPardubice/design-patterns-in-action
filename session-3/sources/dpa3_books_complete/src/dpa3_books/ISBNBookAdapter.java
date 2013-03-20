@@ -12,8 +12,8 @@ public class ISBNBookAdapter implements IAdaptedBook {
     
     private ISBNBook book;
     
-    public ISBNBookAdapter(ISBNBook book) {
-        this.book = book;
+    public ISBNBookAdapter(String name, String author, String isbn) {
+        this.book = new ISBNBook(name, author, isbn);
     }
     
     @Override

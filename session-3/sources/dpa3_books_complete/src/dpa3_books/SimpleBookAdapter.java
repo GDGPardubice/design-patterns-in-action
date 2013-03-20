@@ -5,9 +5,9 @@ public class SimpleBookAdapter implements IAdaptedBook {
     
     private SimpleBook book;
     
-    public SimpleBookAdapter(SimpleBook book)
+    public SimpleBookAdapter(String name, String author)
     {
-        this.book = book;
+        this.book = new SimpleBook(name, author);
     }
     
     @Override
