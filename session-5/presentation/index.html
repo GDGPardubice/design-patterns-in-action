@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Design Patterns in action</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Jiří Pénzeš, Jan Voráček, Vojtěch Biberle">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <script>document.write('<link rel="stylesheet" href="../../reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');</script>
+    <!--[if lt IE 9]>
+    <script src="../../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .reveal section img {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h2>design patterns in action</h2>
+                </section>
+                <section>
+                    <img src="../../gdg-pardubice-logo-big.png" style="border: none;">
+                    <h2>www.gdgpardubice.cz</h2>
+                </section>
+            </section>
+            <section>
+                <h2>Úkol - výherce</h2>
+                <h1 class="fragment" style="color: red;">Dnes není</h1>
+            </section>
+            <section>
+                <section>
+                    <img src="images/proxy.png">
+                </section>
+               <section>
+                     <h2>Composite</h2>
+                     <p>
+                        Struktura sjednocující typy používaných objektů a zajišťující tak jejich snadné zpracování nezávisle na tom, o jaký objekt se jedná a jestli je atomický nebo není.
+                     </p>
+               </section>
+                <section>
+                    <h2>UML</h2>
+                    <img src="images/composite-uml.png">
+                </section>  
+                <section>
+                    <h2>Příklady použití</h2>
+                    <ul>
+                        <li class="fragment fade-in">Třídy pro přístup k souborům,</li>
+                        <li class="fragment fade-in">GUI, kde prvky mají stejného rodiče,</li>
+                        <li class="fragment fade-in">mapové podklady, zaznamenávající obce a komunikace,</li>
+                        <li class="fragment fade-in">struktura kategorií a článků v RS.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Požadavky</h2>
+                    <ul>
+                        <li class="fragment fade-in">Stejný rodič pro všechny prvky struktury.</li>
+                        <li class="fragment fade-in">Rodič definuje společné operace.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Vzor Composite použijete, když máme objekty, které</h2>
+                    <ul>
+                        <li class="fragment fade-in">potřebujeme hierarchicky řadit,</li>
+                        <li class="fragment fade-in">mezi sebou mají vazby, které chceme naznačit.</li>
+                    </ul>
+               </section>
+               <section>
+                    <h2>Vzor Composite použijeme, když chceme</h2>
+                    <ul>
+                        <li class="fragment fade-in">pracovat se všemi objekty stejně,</li>
+                        <li class="fragment fade-in">procházet celou hierarchií jasně definovanými cestami,</li>
+                        <li class="fragment fade-in">rekurzivně zpracovávat velké množství dat,</li>
+                        <li class="fragment fade-in">pracovat s celou strukturou po částech.</li>
+                    </ul>
+               </section>
+                <section>
+                    <h2>Jdeme kódit!</h2>
+                </section>
+                <section>
+                    <h2>Shrnutí</h2>
+                    <p class="fragment fade-in">Composite nemusí být jen stromovou strukturou, tak jak ji známe z matematiky.</p>
+                    <p class="fragment fade-in">Umožňuje pracovat s rozdílnými prvky stejným způsobem.</p>
+                    <p class="fragment fade-in">Neomezujte se při návrhu jen na atomické prvky &amp; společné rozhraní prvků definujte co nejrozsáhlejší.</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <img src="images/lazy.jpg">
+                </section>
+                <section>
+                    <h2>Pool</h2>
+                    <p>
+                        Pool (Fond nebo Bazén) použijeme ve chvíli, kdy chceme omezit počet instancí objektu, ale na druhou stranu nechceme vytvářet nové objekty a dáváme přednost "reinkarnaci" objektu.
+                    </p>
+                </section>
+                <section>
+                    <h2>UML</h2>
+                    <img src="images/pool-uml.png">
+                </section>
+                <section>
+                    <h2>UML</h2>
+                    <img src="images/pool-sequence.png">
+                </section>
+                <section>
+                    <h2>UML</h2>
+                    <img src="images/pool-sequence-simple.png">
+                </section>
+                <section>
+                    <h2>Příklady použití:</h2>
+                    <p class="fragment fade-in">Objekty pro náročné výpočetní úlohy,</p>
+                    <p class="fragment fade-in">připojení k databázi,</p>
+                    <p class="fragment fade-in">typicky náročné systémové úlohy, které se dají znovupoužít.</p>
+                </section>
+                <section>
+                    <h2>Požadavky</h2>
+                    <p class="fragment fade-in">Pool musí efektivně spravovat své zdroje.</p>
+                    <p class="fragment fade-in">Pool musí nabízet API pro získání a odevzdání objektu.</p>
+                </section>
+                <section>
+                    <h2>Jdeme kódit!</h2>
+                </section>
+                <section>
+                    <h2>Shrnutí</h2>
+                    <p class="fragment fade-in">Pool využijeme, pokud je výhodnější použít již jednou vytvořenou instanci objektu, než vytvářet novou instanci.</p>
+                    <p class="fragment fade-in">Pool můžeme využít tehdy, pokud chceme omezit maximální počet vytvářených instancí.</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Tričko?</h2>
+                    <h2 class="fragment fade-in" style="color: red;">Za úkol!</h2>
+                </section>
+                <section>
+                    <h2>Zadání</h2>
+                    <p>
+                        Navrhněte aplikaci, která bude využívat vzor Composite a bude uchovávat zaměstnaneckou strukturu fiktivní firmy. Firma bude mít několik druhů zaměstnanců (ředitel, uklízečka, brigádník, vývojář, nástěnkář apod.) a pomocí vzoru Composite bude zajištěno zjišťování informací o zaměstnancích, vypsání všech, správné zařazení do struktury a případně další operace (snížení platu apod.).
+                    </p>
+                    <br>
+                    <p style="color: red;">
+                        Autor nejrychleji odevzdané práce a autor nejlepší implementace bude odměněn.
+                    </p>
+                    <br>
+                    <h3>Odevzdání: info@gdgpardubice.cz</h3>
+
+                </section>
+            </section>
+            <section>
+                <h2>Feedback</h2>
+                    <p>Prosím vyplňte krátký feedback:<br />
+                        <a href="http://gdgpardubice.cz/go/dpa5" target="_blank">gdgpardubice.cz/go/dpa5</a>
+                    </p>
+                </section>
+        </div>
+    </div>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.min.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            theme: Reveal.getQueryHash().theme || 'serif', // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+                // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+		</script>
+</body>
+</html>
