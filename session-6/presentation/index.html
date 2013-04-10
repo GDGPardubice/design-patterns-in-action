@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Design Patterns in action</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Jiří Pénzeš, Jan Voráček, Vojtěch Biberle">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <script>document.write('<link rel="stylesheet" href="../../reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');</script>
+    <!--[if lt IE 9]>
+    <script src="../../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .reveal section img {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h2>design patterns in action</h2>
+                </section>
+                <section>
+                    <img src="../../gdg-pardubice-logo-big.png" style="border: none;">
+                    <h2>www.gdgpardubice.cz</h2>
+                </section>
+            </section>
+            <section>
+                <h2>Úkol - výherce</h2>
+                <h1 class="fragment" style="color: red;">Dnes není</h1>
+            </section>
+            <section>
+                <section>
+                     <h2>Dnes speciální díl!</h2>
+                </section>
+                <section>
+                    <img src="images/wtf-cat.gif" />
+                </section>
+                <section>
+                    <p>Dnes budeme <strong>jen kodit</strong> a to <strong>v párech</strong>.</p>
+                </section>
+                <section>
+                    <h2>Logger</h2>
+                </section>
+                <section>
+                   <h2>Zadání: Logger</h2>
+                    <ul>
+                        <li>udělat loggovací malou logovací knihovnu (umižnit pouze logování)</li>
+                        <li>možnost customizovat logovací zprávy</li>
+                        <li>možnost psaní pluginů</li>
+                        <li>různé módy loggování</li>
+                        <li>log do souboru</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Challange #1</h2>
+                        <p>
+                            Vytvořte možnost pro definování vzhledu výstupu: styl data a času, pořadí zpráv a podobně.
+                        </p>
+                </section>
+                <section>
+                    <h2>Challange #2</h2>
+                    <p>
+                        Vytvořte podporu pro různé write backendy (soubor, databáze, error výstup, logovací konzole)
+                    </p>
+                </section>
+                <section>
+                    <h2>Challange #3</h2>
+                    <p>
+                        Umožněte nastavit různou úroveň logování. Logger se bude chovat při různých úrovních jinak.
+                        Např. zápis do souboru při nízké úrovni a odeslání emailu při vysoké.
+                    </p>
+                </section>
+                <section>
+                    <h2>Challange #4</h2>
+                    <p>
+                        Možnost vytvořit více instancí loggerů s různým nastavením.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h2>Feedback</h2>
+                    <p>Prosím vyplňte krátký feedback:<br />
+                        <a href="http://gdgpardubice.cz/go/dpa6" target="_blank">gdgpardubice.cz/go/dpa6</a>
+                    </p>
+                </section>
+        </div>
+    </div>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.min.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            theme: Reveal.getQueryHash().theme || 'serif', // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+                // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+		</script>
+</body>
+</html>
